@@ -1,6 +1,6 @@
 [mod]
 id = "optizoom"
-version = "1.0.0"
+version = "1.0.1"
 priority = 100
 
 # Pinned: besides the native hook points it reaches inside Horizon in one place,

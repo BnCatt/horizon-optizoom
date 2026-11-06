@@ -10,7 +10,7 @@ use std::cell::RefCell;
 
 /// The mod's id: its key's line (`key.optizoom.zoom` in `horizon-mods.txt`).
 pub const ID: &str = "optizoom";
-pub const VERSION: &str = "1.0.0";
+pub const VERSION: &str = "1.0.1";
 pub const DESCRIPTION: &str = "OptiFine's zoom: hold C for a quarter of the field of view with \
 the cinematic camera, the hand hidden. Scroll while holding to zoom further in or out.";
 /// The key's name, and its default (OptiFine's).
