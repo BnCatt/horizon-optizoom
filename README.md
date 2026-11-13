@@ -19,7 +19,7 @@ python tools/package.py --install   # target/optizoom-1.0.1.hnmod, copied into h
 rustc --edition 2024 --test mixins/optizoom/runtime.rs -o optizoom_test && ./optizoom_test
 ```
 
-Pinned to Horizon `66f3981` (Nightly 2026-11-05): the cinematic camera is Game's private
+Pinned to Horizon `9f42064` (Nightly 2026-11-13): the cinematic camera is Game's private
 `smooth_camera` field (`camera.rs`), which no hook point offers. Everything else uses hook points
 (`key`, `input_key`, `frame`, `wheel`, `zoom`, `render_hand`, `mods`).
 

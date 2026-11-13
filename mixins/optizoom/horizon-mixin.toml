@@ -1,6 +1,6 @@
 [mod]
 id = "optizoom"
-version = "1.0.1"
+version = "1.0.2"
 priority = 100
 
 # Pinned: besides the native hook points it reaches inside Horizon in one place,
@@ -8,7 +8,7 @@ priority = 100
 # turns on), and release.rs uses `keybinds::key_name` as imported in
 # native_hooks.rs. Re-check both before moving the pin.
 [compatibility]
-horizon_revision = "66f3981f522b24c250b21523a70080965b940424"
+horizon_revision = "9f42064c11efe7ef3e5ed2baad7ddc2a3b36eea0"
 
 [[module]]
 id = "runtime"
