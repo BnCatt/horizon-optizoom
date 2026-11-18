@@ -1,0 +1,25 @@
+id = "optizoom"
+name = "OptiZoom"
+version = "1.1.0"
+description = "OptiFine's zoom: hold C for a quarter of the field of view with the cinematic camera, the hand hidden. Scroll while holding to zoom further in or out."
+authors = ["BnCatt"]
+api = "0.2"
+side = "client"
+capabilities = ["registries"]
+
+# Pinned: one reach inside Horizon, the cinematic camera (Game's private
+# `smooth_camera`, which OptiFine's zoom turns on), in src/mixins/camera.rs.
+# Everything else goes through mod_api hooks.
+[native]
+game = "26.3"
+horizon = "0b14f8acfd97fa2c750e42795249dcc981178ca4"
+mixins = "e59da9094f0c2fdda6c627fe9eff22dec6a906f0"
+
+# After the frame's hooks have decided the zoom: turn the cinematic camera on
+# for it, or back to what it was.
+[[native.mixin]]
+id = "camera"
+target = "horizon_client::game::native_hooks::render_frame_post::Game<'_>::native_render_frame_post"
+kind = "HEAD"
+helper = "src/mixins/camera.rs"
+bindings = [{ name = "game", ty = "&mut Game<'_>", value = "&mut *self" }]
